@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ToogleStyle.css";
-//stateLess functional component: component nhưng không sử dụng state
+// stateLess functional component: component nhưng không sử dụng state
 // function Toggle() {
 //     return <div className="Toggle"></div>;
 // }
