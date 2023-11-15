@@ -11,7 +11,7 @@ export function calculateWinner(cells) {
     ];
     for (let index = 0; index < line.length; index++) {
         const [a, b, c] = line[index];
-        if(cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
             return cells[a];
         }
     }

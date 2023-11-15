@@ -8,6 +8,9 @@ const Board = (props) => {
                 <Cell
                     key={index}
                     value={item}
+                    className={
+                        item === "X" ? "is-x" : item === "O" ? "is-o" : ""
+                    }
                     onClick={() => props.onClick(index)}
                 ></Cell>
             ))}
