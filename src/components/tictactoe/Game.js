@@ -7,25 +7,23 @@ const Game = () => {
     // const [board, setBoard] = useState(Array(9).fill(null));
     // const [xIsNext, setXIsNext] = useState(true);
 
-    const [state, setState]=useState(
-        {
-            board: Array(9).fill(null),
-            xIsNext: true
-        }
-    )
+    const [state, setState] = useState({
+        board: Array(9).fill(null),
+        xIsNext: true,
+    });
     const winner = calculateWinner(state.board);
     const handleClick = (index) => {
         const boardCopy = [...state.board];
         if (winner || boardCopy[index]) return;
         boardCopy[index] = state.xIsNext ? "X" : "O";
         setState({
-            board:boardCopy,
-            xIsNext: !state.xIsNext
+            board: boardCopy,
+            xIsNext: !state.xIsNext,
         });
     };
     const ResetGame = () => {
         setState({
-            board: Array(9).fill(null)
+            board: Array(9).fill(null),
         });
     };
     return (
